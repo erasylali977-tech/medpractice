@@ -1,42 +1,23 @@
 {
-  "name": "medpractice",
+  "name": "medpractice-server",
   "version": "1.0.0",
-  "private": true,
+  "description": "Backend API for MedPractice",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test-claude": "node test-claude.js",
+    "setup-claude": "node check-env.js"
+  },
   "dependencies": {
-    "lucide-react": "^0.554.0",
-    "mammoth": "^1.11.0",
-    "qrcode.react": "^4.2.0",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
-    "react-scripts": "^5.0.1"
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "@google/generative-ai": "^0.21.0",
+    "dotenv": "^16.3.1"
   },
   "devDependencies": {
-    "concurrently": "^8.2.2"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "server": "cd server && npm run dev",
-    "dev": "concurrently \"npm run server\" \"npm start\""
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "proxy": "http://localhost:3001"
+    "nodemon": "^3.0.1"
+  }
 }
+
